@@ -1,0 +1,12 @@
+libdir=/home/charis/Desktop/coding/Parallel Systems/Homework 2-KNN/knn/lib
+includedir=/home/charis/Desktop/coding/Parallel Systems/Homework 2-KNN/knn/include
+openblas_config= USE_64BITINT= DYNAMIC_ARCH= DYNAMIC_OLDER= NO_CBLAS= NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= HASWELL MAX_THREADS=4
+version=0.3.7
+extralib=-lm -lpthread -lgfortran -lm -lpthread -lgfortran
+Name: openblas
+Description: OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version
+Version: ${version}
+URL: https://github.com/xianyi/OpenBLAS
+Libs: -L${libdir} -lopenblas
+Libs.private: ${extralib}
+Cflags: -I${includedir}
